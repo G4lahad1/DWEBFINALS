@@ -1,8 +1,6 @@
 {
-    "name": "your-username/my-website",
-    "description": "A PHP website deployed on Railway",
-    "type": "project",
     "require": {
-        "php": ">=8.0"
+        "php": ">=8.1",
+        "ext-pdo_mysql": "*"
     }
 }
