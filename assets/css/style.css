@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url('photos/login banner.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 45px 40px;
+    border-radius: 12px;
+    text-align: center;
+    background: rgba(120, 16, 22, 0.9);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    color: white;
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    width: 140px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
+}
+
+h2 {
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 1.5rem;
+}
+
+h3 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 14px 15px;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+input:focus {
+    outline: none;
+    background: #ffffff;
+    box-shadow: 0 0 8px rgba(255,255,255,0.4);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #781016;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background: #f8f8f8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.forgot-link {
+    display: block;
+    margin-top: 25px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 300;
+    transition: color 0.3s;
+    padding: 8px 0;
+}
+
+.forgot-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.error-banner {
+    background-color: rgba(220, 53, 69, 0.2);
+    border: 1px solid #dc3545;
+    color: #ffcdd2;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 500;
+    backdrop-filter: blur(2px);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================================
+   RESPONSIVE MEDIA QUERIES — LOGIN PAGE
+   =========================================== */
+
+/* Tablet (up to 768px) */
+@media (max-width: 768px) {
+    body {
+        padding: 30px 20px;
+    }
+
+    .login-card {
+        padding: 40px 32px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 16px;
+        background-attachment: scroll;
+        align-items: flex-start;
+        padding-top: 40px;
+    }
+
+    .login-card {
+        padding: 32px 22px;
+        border-radius: 10px;
+    }
+
+    .logo {
+        width: 95px;
+        margin-bottom: 12px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        margin-bottom: 16px;
+    }
+
+    h3 {
+        font-size: 0.95rem;
+        margin-bottom: 14px;
+    }
+
+    /* Font-size 16px prevents iOS zoom-on-focus */
+    input {
+        padding: 13px 14px;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+
+    .login-btn {
+        padding: 13px;
+        font-size: 15px;
+        letter-spacing: 0.8px;
+    }
+
+    .input-group {
+        margin-bottom: 14px;
+    }
+
+    .forgot-link {
+        margin-top: 16px;
+        font-size: 0.82rem;
+    }
+
+    .error-banner {
+        font-size: 12px;
+    }
+}
+
+/* Very small phones (up to 360px) */
+@media (max-width: 360px) {
+    body {
+        padding: 10px;
+        padding-top: 24px;
+    }
+
+    .login-card {
+        padding: 26px 16px;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+}
