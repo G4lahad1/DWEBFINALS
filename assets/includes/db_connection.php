@@ -1,14 +1,16 @@
 <?php
-$host = 'db'; 
-$user = 'root';
-$pass = '';
-$dbname = 'library_db';
+$servername = "localhost";
+$username = "root";       
+$password = "";        
+$dbname = "library_system"; 
 
-$conn = new mysqli($host, $user, $pass, $dbname);
-if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-
-// Auto-update logic
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 $auto_update_sql = "
     UPDATE reservations 
     SET status = 'completed' 
@@ -16,5 +18,7 @@ $auto_update_sql = "
     AND TIMESTAMP(reservation_date, end_time) < NOW()
 ";
 
+// Execute the silent update
 $conn->query($auto_update_sql);
+
 ?>
